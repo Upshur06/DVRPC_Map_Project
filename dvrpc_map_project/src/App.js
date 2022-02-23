@@ -1,4 +1,5 @@
 import './App.css';
+import { MyMap } from './components/MyMap';
 
 function App() {
   return (
@@ -6,6 +7,8 @@ function App() {
       <header className="App-header">
         <h1> Indicators of Potential Disadvantage (IPD)</h1>
       </header>
+
+      <MyMap />
 
       <footer>
         <p>
