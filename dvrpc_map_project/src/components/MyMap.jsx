@@ -43,19 +43,21 @@ export default function MyMap() {
             Property: ${area_Y}, Display Name: Indicators of Potential Disadvantage
             `)
 
+            const onTargetMouseOver = (e) => {
+                e.target.setStyle({
+                    color: '#5ec8f2'
+                })
+            }
 
+            const offTargetMouseOut = (e) => {
+                e.target.setStyle({
+                    color: '#3388ff'
+                })
+            }
             
             layer.on({
-                mouseover: (e) => {
-                    e.target.setStyle({
-                        color: '#5ec8f2'
-                    })
-                },
-                mouseout: (e) => {
-                    e.target.setStyle({
-                        color: '#3388ff'
-                    })
-                }
+                mouseover: onTargetMouseOver,
+                mouseout: offTargetMouseOut
             })
         }
 
