@@ -1,18 +1,61 @@
-import React, { useState, useEffect } from 'react'
-import map from './../data/map.json'
-import { MapContainer } from 'react-leaflet'
+import React, { useEffect} from 'react'
+import { Map, GeoJSON } from 'react-leaflet'
+import mapData from './../data/map.json'
 import 'leaflet/dist/leaflet.css'
 
-export const MyMap = () => {
+// class MyMap extends Component {
+//     state = {};
 
-    // useEffect(() => {
-    //     console.log(map)
-    // },[])
+//     componentDidMount(){
+//         console.log(mapData)
+//     }
 
-    return (
-        <div>
-            <h1>My Map</h1>
-            <MapContainer style ={{ height: '60vh' }}></MapContainer>
-        </div>
-    )
+//     render () {
+//         return (
+//             <div>
+//                 <h1>My Map</h1>
+//                 <div className='mapBorder'>
+//                  <Map style={{ height: '80vh' }} zoom={10} center={[40.05, -75]}>
+//                     <GeoJSON data={mapData.features} />
+//                 </Map>
+//              </div>
+//             </div>
+//         )
+//     }
+// }
+
+// export default MyMap
+
+
+// export const MyMap = () => {
+
+
+//     useEffect(() => {
+//         console.log(mapData)
+//     },[])
+
+//     return (
+//         <div>
+//             <h1>My Map</h1>
+//             <div className='mapBorder'>
+//                 <Map style={{ height: '80vh' }} zoom={10} center={[40.05, -75]}>
+//                     <GeoJSON data={mapData.features} />
+//                 </Map>
+//             </div>
+//         </div>
+//     )
+// }
+
+
+export default function MyMap() {
+  return (
+    <div>
+        <h1>My Map</h1>
+             <div className='mapBorder'>
+                 <Map style={{ height: '80vh' }} zoom={10} center={[40.05, -75.18]}>
+                     <GeoJSON data={mapData.features} />
+                 </Map>
+            </div>
+    </div>
+  )
 }
