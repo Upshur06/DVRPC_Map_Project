@@ -3,6 +3,11 @@ import MyMap from './components/MyMap'
 
 
 function App() {
+
+  const color = {
+    
+  }
+
   return (
     <div className="App">
       <header className="App-header">
