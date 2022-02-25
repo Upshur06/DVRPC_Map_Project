@@ -56,9 +56,8 @@ export default function MyMap() {
 
   return (
     <div>
-        <h1>My Map</h1>
              <div className='mapBorder'>
-                 <Map style={{ height: '80vh', width: '90vw', border: '2px solid black' }} zoom={10} center={[40.05, -75.1]}>
+                 <Map style={{ height: '80vh', width: '90vw', border: '3px solid black' }} zoom={10} center={[40.05, -75.1]}>
                      <GeoJSON data={mapData.features} onEachFeature={onEachArea}  />
                  </Map>
             </div>

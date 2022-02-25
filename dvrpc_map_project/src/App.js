@@ -1,12 +1,7 @@
 import './App.css';
 import MyMap from './components/MyMap'
 
-
 function App() {
-
-  const color = {
-    
-  }
 
   return (
     <div className="App">
@@ -18,7 +13,7 @@ function App() {
 
       <footer>
         <p>
-          data provided by DVRPC, 2019 Indicators of PotentialDisadvantage and links to: 
+          data provided by DVRPC, 2019 Indicators of PotentialDisadvantage and links to: <br/>
         
         <a
           className="App-link"
