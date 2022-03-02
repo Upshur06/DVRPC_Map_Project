@@ -6,8 +6,8 @@ import './../css/MyMap.css'
 
 export default function MyMap() {
 
-    const colors = ['#2477A3', '#77B2D1', '#214C63', '#22A0E2', '#1199E0', '#033550', '#02537D', '#02537D',         
-                    '#DFF2FD', '#DFF2FD', '#66A8CB', '#56A4CC', '#3393C6', '#3D87AD', '#BFD2DD', '#092C3F', '#ECEFF0', '#0B6EA1', '#0B6EA1', '#3589B5', '#567585', '#567585', '#78B7D8', '#4C7285', '#88959C', '#5297BB', '#62B1DA', '#0F89C9', '#17658E', '#5190B0','#4A5A62', '#0173AF', '#ACBAC1', '#81C5E9', '#2175B5', '#0A4D80', '#1997F8']
+    const colors = ['#2477A3', '#77B2D1', '#214C63', '#22A0E2', '#1199E0', '#033550', '#02537D',        
+                    '#02537D', '#DFF2FD', '#DFF2FD', '#66A8CB', '#56A4CC', '#3393C6', '#3D87AD', '#BFD2DD', '#092C3F', '#ECEFF0', '#0B6EA1', '#0B6EA1', '#3589B5', '#567585', '#567585', '#78B7D8', '#4C7285', '#88959C', '#5297BB', '#62B1DA', '#0F89C9', '#17658E', '#5190B0','#4A5A62', '#0173AF', '#ACBAC1', '#81C5E9', '#2175B5', '#0A4D80', '#1997F8']
 
         const onEachArea = (area, layer) =>{
             const area_IPD = `score: ${area.properties.ipd_score}`
@@ -22,15 +22,15 @@ export default function MyMap() {
             const area_Y = `score: ${area.properties.y_score}`
 
             layer.bindPopup(`Property: ${area_IPD}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_D} Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_EM}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_F}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_FB}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_LEP}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_LI}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_OA}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_RM}, Display Name: Indicators of Potential Disadvantage<br>
-            Property: ${area_Y}, Display Name: Indicators of Potential Disadvantage
+            Property: ${area_D} Display Name: Disabled<br>
+            Property: ${area_EM}, Display Name: Ethnic Minority<br>
+            Property: ${area_F}, Display Name: Female<br>
+            Property: ${area_FB}, Display Name: Foreign Born<br>
+            Property: ${area_LEP}, Display Name: Limited English Proficiency<br>
+            Property: ${area_LI}, Display Name: Low-Income<br>
+            Property: ${area_OA}, Display Name: Older Adults<br>
+            Property: ${area_RM}, Display Name: Display Name: Racial Minority<br>
+            Property: ${area_Y}, Display Name: Racial Minority
             `)
 
             const colorIndex = Math.floor(Math.random() * colors.length)
